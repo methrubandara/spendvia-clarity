@@ -29,9 +29,8 @@ const Hero = ({ onOpenForm, onOpenDemo, logo }: HeroProps) => {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="text-4xl sm:text-5xl lg:text-6xl font-semibold leading-tight tracking-tight mb-6"
         >
-          See what you already own.{" "}
           <span className="gradient-text">
-            Stop wasting money.
+            Make every purchase intentional
           </span>
         </motion.h1>
 
