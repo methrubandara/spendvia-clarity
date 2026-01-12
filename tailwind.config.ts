@@ -74,7 +74,7 @@ export default {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
-      keyframes: {
+keyframes: {
         "accordion-down": {
           from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
@@ -83,6 +83,45 @@ export default {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        // Flowfield Aurora animations - calm, continuous, 25-45s loops
+        "aurora-shift": {
+          "0%, 100%": { transform: "scale(1) rotate(0deg)", opacity: "1" },
+          "33%": { transform: "scale(1.05) rotate(0.5deg)", opacity: "0.9" },
+          "66%": { transform: "scale(0.98) rotate(-0.3deg)", opacity: "1" },
+        },
+        "aurora-morph": {
+          "0%, 100%": { transform: "translateX(0) translateY(0) scale(1)" },
+          "25%": { transform: "translateX(30px) translateY(-20px) scale(1.02)" },
+          "50%": { transform: "translateX(-20px) translateY(30px) scale(0.98)" },
+          "75%": { transform: "translateX(20px) translateY(10px) scale(1.01)" },
+        },
+        "contour-drift": {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-100px)" },
+        },
+        "path-flow-1": {
+          "0%, 100%": { strokeDashoffset: "0", opacity: "1" },
+          "50%": { strokeDashoffset: "50", opacity: "0.7" },
+        },
+        "path-flow-2": {
+          "0%, 100%": { strokeDashoffset: "0", opacity: "0.8" },
+          "50%": { strokeDashoffset: "-50", opacity: "1" },
+        },
+        "glow-drift-1": {
+          "0%, 100%": { transform: "translateX(0) translateY(0) scale(1)", opacity: "1" },
+          "33%": { transform: "translateX(40px) translateY(-30px) scale(1.05)", opacity: "0.8" },
+          "66%": { transform: "translateX(-20px) translateY(20px) scale(0.95)", opacity: "1" },
+        },
+        "glow-drift-2": {
+          "0%, 100%": { transform: "translateX(0) translateY(0) scale(1)", opacity: "1" },
+          "50%": { transform: "translateX(-50px) translateY(40px) scale(1.08)", opacity: "0.9" },
+        },
+        "glow-drift-3": {
+          "0%, 100%": { transform: "translateX(0) translateY(0) scale(1)", opacity: "1" },
+          "40%": { transform: "translateX(30px) translateY(-25px) scale(1.03)", opacity: "0.85" },
+          "80%": { transform: "translateX(-25px) translateY(15px) scale(0.97)", opacity: "1" },
+        },
+        // Legacy animations
         float: {
           "0%, 100%": { transform: "translateY(0) translateX(0) scale(1)" },
           "25%": { transform: "translateY(-20px) translateX(10px) scale(1.02)" },
@@ -97,19 +136,23 @@ export default {
           "0%, 100%": { opacity: "0.4", transform: "scale(1)" },
           "50%": { opacity: "0.6", transform: "scale(1.05)" },
         },
-        aurora: {
-          "0%": { backgroundPosition: "0% 50%" },
-          "50%": { backgroundPosition: "100% 50%" },
-          "100%": { backgroundPosition: "0% 50%" },
-        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        // Flowfield Aurora - all linear timing for calm, continuous motion
+        "aurora-shift": "aurora-shift 35s linear infinite",
+        "aurora-morph": "aurora-morph 40s linear infinite",
+        "contour-drift": "contour-drift 45s linear infinite",
+        "path-flow-1": "path-flow-1 30s linear infinite",
+        "path-flow-2": "path-flow-2 25s linear infinite",
+        "glow-drift-1": "glow-drift-1 35s linear infinite",
+        "glow-drift-2": "glow-drift-2 40s linear infinite",
+        "glow-drift-3": "glow-drift-3 30s linear infinite",
+        // Legacy
         float: "float 20s ease-in-out infinite",
         drift: "drift 30s ease-in-out infinite",
         "pulse-slow": "pulse-slow 8s ease-in-out infinite",
-        aurora: "aurora 15s ease infinite",
       },
     },
   },
