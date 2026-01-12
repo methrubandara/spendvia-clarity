@@ -140,17 +140,7 @@ keyframes: {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        // Soft Signal Wave animations - horizontal flow at different speeds
-        "wave-flow-1": "wave-flow-1 40s linear infinite",
-        "wave-flow-2": "wave-flow-2 32s linear infinite",
-        "wave-flow-3": "wave-flow-3 26s linear infinite",
-        "wave-flow-4": "wave-flow-4 22s linear infinite",
-        "wave-flow-5": "wave-flow-5 38s linear infinite",
-        "vertical-drift": "vertical-drift 45s linear infinite",
-        "glow-pulse-1": "glow-pulse-1 25s linear infinite",
-        "glow-pulse-2": "glow-pulse-2 30s linear infinite",
-        "glow-pulse-3": "glow-pulse-3 35s linear infinite",
-        // Legacy Aurora animations (kept for compatibility)
+        // Flowfield Aurora - all linear timing for calm, continuous motion
         "aurora-shift": "aurora-shift 35s linear infinite",
         "aurora-morph": "aurora-morph 40s linear infinite",
         "contour-drift": "contour-drift 45s linear infinite",
