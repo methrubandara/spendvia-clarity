@@ -50,10 +50,8 @@ const Hero = ({
       }} transition={{
         duration: 0.6,
         delay: 0.2
-      }} className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
-          Before you approve that next purchase, know what's already sitting unused. 
-          Spendvia gives operations and finance leaders clarity at the moment of decision.
-        </motion.p>
+      }} className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed"> Spendvia analyzes inventory, depreciation, and historical spend to surface cheaper and more efficient alternatives at the moment a purchase is requested. Teams spend less without adding process or slowing approvals.
+      </motion.p>
 
         {/* CTAs */}
         <motion.div initial={{
